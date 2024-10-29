@@ -1,0 +1,26 @@
+.header-style {
+    background: var(--primary-black);
+    display: flex;
+    padding: 1rem 3rem;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;; /* Smooth color transition */
+}
+
+.header-style.scrolled {
+    background: var(--primary-white);
+}
+
+.title {
+    font-weight: bold;
+    margin-right: auto;
+}
+
+.link-buttons {
+    padding: 0rem 2rem;
+    letter-spacing: 0.3em; 
+    font-size: 12px;
+}
+
+.search-button {
+    margin-left: auto;
+}

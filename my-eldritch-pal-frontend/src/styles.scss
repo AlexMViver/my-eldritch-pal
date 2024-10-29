@@ -1,0 +1,33 @@
+@use '@angular/material' as mat;
+
+$my-theme: mat.define-theme(
+  $config: (
+    typography: (
+      plain-family: 'Arial, sans-serif',
+      brand-family: 'Arial, sans-serif',
+    ),
+  ),
+);
+
+:root {
+    @include mat.all-component-typographies($my-theme);
+
+    --primary-black: #000000;
+    --primary-white: #ffffff;
+    --primary-background: #f6f2f2;
+    --primary-gray: #dbdbdbb8;
+}
+
+
+
+html, body { height: auto; }
+body { 
+    background: var(--primary-background);
+    margin: 0; 
+    font-family: Arial,  sans-serif; 
+    font-size: 12px; 
+}
+
+
+
+

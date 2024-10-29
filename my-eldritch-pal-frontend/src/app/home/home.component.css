@@ -1,0 +1,26 @@
+.title-image {
+    height: calc(100vh - 72px);
+    overflow: hidden;
+}
+
+.small-image {
+    margin: 5px;
+    width: 75%;
+    height: auto;
+    object-fit: cover;
+}
+
+.section-block {
+    height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-slice {
+    width: 50%;
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}

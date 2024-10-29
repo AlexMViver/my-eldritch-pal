@@ -1,0 +1,38 @@
+<app-header #header class="toolbar" [sidenav]="snav"></app-header>
+
+<mat-sidenav-container >
+    <mat-sidenav [fixedInViewport]="true"
+    [fixedTopGap]="headerHeight"
+      #snav style="height: 100%;"
+    >
+    <div class="sidenav-options">
+
+        <!-- Search button -->
+        <button
+        mat-icon-button
+        aria-label="Search icon"
+        class="w-100 link-buttons"
+      >
+        <mat-icon>search</mat-icon>
+      </button>
+
+      <a mat-button class="link-buttons" routerLink="/" aria-label="HOME">HOME</a>
+      <a mat-button class="link-buttons" routerLink="/rent" aria-label="RENT">RENT</a>
+      <a mat-button class="link-buttons" routerLink="/news" aria-label="NEWS">NEWS</a>
+      <a mat-button class="link-buttons" routerLink="/contact" aria-label="CONTACT">CONTACT</a>
+      <a mat-button class="link-buttons" routerLink="/about" aria-label="ABOUT">ABOUT</a>
+    </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <main>
+
+        <app-home></app-home>
+        
+       
+      </main>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+<router-outlet />

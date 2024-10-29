@@ -1,0 +1,28 @@
+.toolbar {
+    top:0;
+    z-index: 1000;
+    position: sticky;
+}
+
+.sidenav-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.link-buttons {
+    padding: 0rem 3rem;
+    color: var(--primary-black) !important;
+    border-bottom: 2px solid var(--primary-gray) !important;
+    letter-spacing: 0.3em; 
+    font-size: 12px;
+    border-radius: 0;
+}
+
+
+/* Remove search icon focus rounded edges */
+span.mat-mdc-icon-button.mat-mdc-button-persistent-ripple {
+    border-radius: 0 !important;
+}
+:host ::ng-deep .link-buttons .mat-mdc-button-persistent-ripple {
+    border-radius: 0 !important;
+}

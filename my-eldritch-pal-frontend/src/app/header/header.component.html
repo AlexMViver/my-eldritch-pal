@@ -1,0 +1,35 @@
+<div class="header-style" [ngStyle]="{ 'background': backgroundColor }">
+    <!-- Title -->
+    <a mat-button [ngStyle]="{ 'color': textColor }" class="title" routerLink="/" aria-hidden="false" aria-label="My Eldritch Pal">My Eldritch Pal</a>
+
+  <!-- Link buttons -->
+  <div class="d-none d-lg-flex">
+    <a mat-button [ngStyle]="{ 'color': textColor }" class="link-buttons" routerLink="/" aria-label="Home">HOME</a>
+    <a mat-button [ngStyle]="{ 'color': textColor }" class="link-buttons" routerLink="/rent" aria-label="Rent">RENT</a>
+    <a mat-button [ngStyle]="{ 'color': textColor }" class="link-buttons" routerLink="/news" aria-label="News">NEWS</a>
+    <a mat-button [ngStyle]="{ 'color': textColor }" class="link-buttons" routerLink="/contact" aria-label="Contact">CONTACT</a>
+    <a mat-button [ngStyle]="{ 'color': textColor }" class="link-buttons" routerLink="/about" aria-label="About">ABOUT</a>
+  </div>
+
+  <!-- Search button -->
+  <button
+    mat-icon-button
+    aria-label="Search icon"
+    class="search-button d-none d-lg-flex"
+    [ngStyle]="{ 'color': textColor }"
+  >
+    <mat-icon>search</mat-icon>
+  </button>
+
+  <!-- Options trigger button (smaller screens)-->
+  <button
+    mat-icon-button
+    aria-label="More options menu"
+    class="search-button d-flex d-lg-none"
+    [ngStyle]="{ 'color': textColor }"
+    (click)="toggleSidenav()"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+</div>
+
