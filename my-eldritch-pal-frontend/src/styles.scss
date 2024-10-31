@@ -1,17 +1,19 @@
+//Custom material theming
 @use '@angular/material' as mat;
 
-$my-theme: mat.define-theme(
-  $config: (
-    typography: (
-      plain-family: 'Arial, sans-serif',
-      brand-family: 'Arial, sans-serif',
-    ),
+$my-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$azure-palette,
   ),
-);
+  typography: (
+    plain-family: 'Arial, sans-serif',
+    brand-family: 'Arial, sans-serif',
+  )
+));
 
 :root {
-    @include mat.all-component-typographies($my-theme);
-
+  @include mat.all-component-themes($my-theme);
     --primary-black: #000000;
     --primary-white: #ffffff;
     --primary-background: #f6f2f2;
@@ -19,7 +21,7 @@ $my-theme: mat.define-theme(
 }
 
 
-
+// General css
 html, body { height: auto; }
 body { 
     background: var(--primary-background);
