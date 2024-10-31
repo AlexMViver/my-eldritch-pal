@@ -7,7 +7,7 @@
 }
 
 .floating-button {
-    z-index: 1;
+    z-index: 2;
     top:50%;
     position: absolute;
     background: var(--primary-gray);
@@ -28,28 +28,47 @@
 
 }
 
-.carousel img {
+.carousel-img {
     width:80%;
+    height: 100%;
     padding-left: 5px;
     padding-right: 5px;
     flex-shrink: 0;
-    object-fit: cover;
+    display: flex;
+    overflow:hidden;
+    position: relative;
 }
 
 @media (min-width: 576px) {
-    .carousel img {
+    .carousel-img {
         width:80%;
     }
 }
 
 @media (min-width: 768px) {
-    .carousel img {
+    .carousel-img {
         width:40%;
     }
 }
 
 @media (min-width: 992px) {
-    .carousel img {
+    .carousel-img {
         width:30%;
     }
+}
+
+.img {
+    object-fit: cover;
+    flex-shrink: 0;
+    width: auto;
+    height: 100%;
+}
+
+.text-card {
+    color:var(--primary-white);
+    z-index:1;
+    position: absolute;
+    width: 70%;
+    bottom:1em;
+    left: 10px;
 }

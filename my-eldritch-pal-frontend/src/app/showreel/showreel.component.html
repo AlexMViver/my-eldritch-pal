@@ -20,12 +20,28 @@
   <div #carousel class="carousel w-100 h-100 py-3" [style.transform]="updateCarouselPosition()">
 
     <ng-template ngFor let-item [ngForOf]="imgList" let-i="index" >
-        <img #carouselImg src="{{item.src}}" alt="{{item.name}}">
+        <div #carouselImg class="carousel-img">
+            <img src="{{item.src}}" alt="{{item.name}}">
+            <div class="text-card">
+                <span class="d-flex flex-row">
+                    <h2 class="mb-0" style="font-weight: 700;">{{item.name}}</h2>
+                    &nbsp;
+                    <h2 class="mb-0">{{item.age}}</h2>
+                </span>
+                <h2>{{item.species}}</h2>
+            </div> 
+        </div>
     </ng-template>
 
     <!-- Add the 2 first images statically to give ilusion of looping -->
-    <img #carouselImg src="{{imgList[0].src}}" alt="{{imgList[0].name}}">
-    <img #carouselImg src="{{imgList[1].src}}" alt="{{imgList[1].name}}">
+     <div #carouselImg class="carousel-img">
+        <img   src="{{imgList[0].src}}" alt="{{imgList[0].name}}">
+     </div>
+     <div #carouselImg class="carousel-img">
+        <img src="{{imgList[1].src}}" alt="{{imgList[1].name}}">
+     </div>
+    
+    
   </div>
 </div>
 

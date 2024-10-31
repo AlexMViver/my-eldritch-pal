@@ -16,8 +16,8 @@ export class ShowreelComponent {
   @ViewChild('carousel', { static: false, read:ElementRef }) carousel!: ElementRef;
   
 
-  imgList = [{id:0, src: "assets/images/Temp2.jpg", name:"abc", species:"abc"},{id:1, src: "assets/images/Temp.jpg", name:"abc", species:"abc"},{id:2, src: "assets/images/Temp.jpg", name:"abc", species:"abc"},
-    {id:3, src: "assets/images/Temp.jpg", name:"abc", species:"abc"},{id:4, src: "assets/images/Temp.jpg", name:"abc", species:"abc"},{id:5, src: "assets/images/Temp.jpg", name:"abc", species:"abc"}
+  imgList = [{id:0, src: "assets/images/Temp2.jpg", name:"Barbara", species:"Eyeballer", age: 23},{id:1, src: "assets/images/Temp.jpg", name:"abc", species:"abc", age: 23},{id:2, src: "assets/images/Temp.jpg", name:"abc", species:"abc", age: 23},
+    {id:3, src: "assets/images/Temp.jpg", name:"abc", species:"abc", age: 23},{id:4, src: "assets/images/Temp.jpg", name:"abc", species:"abc", age: 23},{id:5, src: "assets/images/Temp.jpg", name:"abc", species:"abc", age: 23}
   ];
 
   idx = this.imgList.length/2;
