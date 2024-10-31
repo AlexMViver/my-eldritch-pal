@@ -1,3 +1,7 @@
+.sidenav-cont {
+    background: var(--primary-background);
+}
+
 .toolbar {
     top:0;
     z-index: 1000;

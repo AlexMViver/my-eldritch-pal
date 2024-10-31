@@ -1,0 +1,32 @@
+<div class="section-block">
+    <button
+    mat-icon-button
+    aria-label="Search icon"
+    class="floating-button left-button"
+    (click)="back()"
+  >
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+
+  <button
+    mat-icon-button
+    aria-label="Search icon"
+    class="floating-button right-button"
+    (click)="forward()"
+  >
+    <mat-icon>arrow_forward</mat-icon>
+  </button>
+
+  <div #carousel class="carousel w-100 h-100 py-3" [style.transform]="updateCarouselPosition()">
+
+    <ng-template ngFor let-item [ngForOf]="imgList" let-i="index" >
+        <img #carouselImg src="{{item.src}}" alt="{{item.name}}">
+    </ng-template>
+
+    <!-- Add the 2 first images statically to give ilusion of looping -->
+    <img #carouselImg src="{{imgList[0].src}}" alt="{{imgList[0].name}}">
+    <img #carouselImg src="{{imgList[1].src}}" alt="{{imgList[1].name}}">
+  </div>
+</div>
+
+

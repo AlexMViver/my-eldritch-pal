@@ -1,0 +1,55 @@
+.section-block {
+    height: calc(100vh - 72px);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    transform: 0.5s ease;
+}
+
+.floating-button {
+    z-index: 1;
+    top:50%;
+    position: absolute;
+    background: var(--primary-gray);
+}
+
+.left-button {
+    left:2%;
+}
+
+
+.right-button {
+    right:2%;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+
+}
+
+.carousel img {
+    width:80%;
+    padding-left: 5px;
+    padding-right: 5px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+@media (min-width: 576px) {
+    .carousel img {
+        width:80%;
+    }
+}
+
+@media (min-width: 768px) {
+    .carousel img {
+        width:40%;
+    }
+}
+
+@media (min-width: 992px) {
+    .carousel img {
+        width:30%;
+    }
+}

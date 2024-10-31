@@ -16,8 +16,9 @@ $my-theme: mat.define-theme((
   @include mat.all-component-themes($my-theme);
     --primary-black: #000000;
     --primary-white: #ffffff;
-    --primary-background: #f6f2f2;
+    --primary-background: #ffffff;
     --primary-gray: #dbdbdbb8;
+    --text-gray: #505050b8;
 }
 
 
@@ -27,7 +28,7 @@ body {
     background: var(--primary-background);
     margin: 0; 
     font-family: Arial,  sans-serif; 
-    font-size: 12px; 
+    font-size: 18px; 
 }
 
 
