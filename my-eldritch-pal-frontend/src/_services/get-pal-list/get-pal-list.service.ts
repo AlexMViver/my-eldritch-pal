@@ -36,12 +36,13 @@ export class GetPalListService {
       },
       { 
         id: "4",
-        name: "Jormungandr",
-        age: "80.000.000",
-        species: "World Serpent",
-        rating: 5,
+        name: "Death",
+        age: "∞",
+        species: "Grim Reaper",
+        rating: 1,
         photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"]
       },
+      
       { 
         id: "5",
         name: "Claude",
@@ -60,20 +61,21 @@ export class GetPalListService {
       },
       { 
         id: "7",
-        name: "Death",
-        age: "∞",
-        species: "Grim Reaper",
-        rating: 1,
-        photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"]
-      },
-      { 
-        id: "8",
         name: "Cthulhu",
         age: "175.000.000",
         species: "Unknown",
         rating: 5,
         photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"]
       },
+      { 
+        id: "8",
+        name: "Jormungandr",
+        age: "80.000.000",
+        species: "World Serpent",
+        rating: 5,
+        photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"]
+      },
+
       { 
         id: "9",
         name: "Winnie",

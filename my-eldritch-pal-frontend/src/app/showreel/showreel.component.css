@@ -60,7 +60,7 @@
 
 .carousel-img:hover img {
     transform: scale(1.05); /* Slight zoom-in */
-    transition: transform 0.6s ease; /* Smooth transition */
+    transition: opacity 1s ease, transform 0.6s ease ; /* Smooth transition */
 }
 
 img {
@@ -68,7 +68,14 @@ img {
     flex-shrink: 0;
     width: auto;
     height: 100%;
-    transition: transform 0.8s ease; /* Smooth transition */
+    position: absolute;
+    opacity: 0; /* Initially hidden */
+    transform: scale(1);
+    transition: opacity 1s ease, transform 0.6s ease; /* Smooth transition */
+}
+
+img.active {
+    opacity: 1; /* Only the active image is visible */
 }
 
 .text-card {
@@ -78,5 +85,10 @@ img {
     width: 70%;
     bottom:1em;
     left: 10px;
+}
+
+.text-card span {
+    flex-wrap: wrap;
+    max-width: 100%;
 }
 
