@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { GetPalListService } from '../../_services/get-pal-list/get-pal-list.service';
+import { PalDTO } from '../../_dtos/pal.dto';
 
 @Component({
   selector: 'app-showreel',
@@ -15,15 +17,20 @@ export class ShowreelComponent {
   @ViewChild('carouselImg', { static: false, read:ElementRef }) carouselImg!: ElementRef;
   @ViewChild('carousel', { static: false, read:ElementRef }) carousel!: ElementRef;
   
+  palList: PalDTO[];
 
-  imgList = [{id:0, src: "assets/images/Temp2.jpg", name:"Barbara", species:"Eyeballer", age: 23},{id:1, src: "assets/images/Temp.jpg", name:"abc", species:"abc", age: 23},{id:2, src: "assets/images/Temp.jpg", name:"abc", species:"abc", age: 23},
-    {id:3, src: "assets/images/Temp.jpg", name:"abc", species:"abc", age: 23},{id:4, src: "assets/images/Temp.jpg", name:"abc", species:"abc", age: 23},{id:5, src: "assets/images/Temp.jpg", name:"abc", species:"abc", age: 23}
-  ];
+  hoveredPal: string = "";
+  currentImageIdx: number = 0;
+  imageCycle: any;
 
-  idx = this.imgList.length/2;
-  maxIdx = this.imgList.length;
+  idx : number;
+  maxIdx : number;
 
-  constructor(){}
+  constructor(private getPalListService: GetPalListService){
+    this.palList = this.getPalListService.getPals().slice(0,6);
+    this.idx = this.palList.length/2;
+    this.maxIdx = this.palList.length;
+  }
 
   back(){
     this.updateMaxIdx();
@@ -39,7 +46,7 @@ export class ShowreelComponent {
     const carouselWidth = this.carousel.nativeElement.offsetWidth;
     const imgWidth = this.carouselImg.nativeElement.offsetWidth;
 
-    this.maxIdx = (this.imgList.length +1) - Math.floor(carouselWidth/imgWidth);
+    this.maxIdx = (this.palList.length +1) - Math.floor(carouselWidth/imgWidth);
   }
 
   updateCarouselPosition() {
@@ -51,6 +58,28 @@ export class ShowreelComponent {
     const offSet = this.idx*imgWidth;
     return `translateX(-${offSet}px)`
   }
+
+  cyclePhotos(pal: PalDTO) {
+    if(this.imageCycle) {
+      this.stopCyclingPhotos();
+    }
+
+    this.hoveredPal = pal.id;
+    this.imageCycle = setInterval(() => {
+      this.currentImageIdx = (this.currentImageIdx + 1) % pal.photos.length;
+    }, 2000);
+  }
+
+  stopCyclingPhotos() {
+    if(this.imageCycle) {
+      clearInterval(this.imageCycle);
+      this.imageCycle = null;
+    }
+    
+    this.hoveredPal= "";
+    this.currentImageIdx = 0;
+  }
+
 
 }
 

@@ -19,9 +19,9 @@
 
   <div #carousel class="carousel w-100 h-100 py-3" [style.transform]="updateCarouselPosition()">
 
-    <ng-template ngFor let-item [ngForOf]="imgList" let-i="index" >
-        <div #carouselImg class="carousel-img">
-            <img src="{{item.src}}" alt="{{item.name}}">
+    <ng-template ngFor let-item [ngForOf]="palList" let-i="index" >
+        <div #carouselImg class="carousel-img" (mouseenter)="cyclePhotos(item)" (mouseleave)="stopCyclingPhotos()">
+            <img src="{{hoveredPal != item.id ? item.photos[0] : item.photos[currentImageIdx]}}" alt="{{item.name}}">
             <div class="text-card">
                 <span class="d-flex flex-row">
                     <h2 class="mb-0" style="font-weight: 700;">{{item.name}}</h2>
@@ -35,10 +35,26 @@
 
     <!-- Add the 2 first images statically to give ilusion of looping -->
      <div #carouselImg class="carousel-img">
-        <img   src="{{imgList[0].src}}" alt="{{imgList[0].name}}">
+        <img   src="{{palList[0].photos[0]}}" alt="{{palList[0].name}}">
+        <div class="text-card">
+          <span class="d-flex flex-row">
+              <h2 class="mb-0" style="font-weight: 700;">{{palList[0].name}}</h2>
+              &nbsp;
+              <h2 class="mb-0">{{palList[0].age}}</h2>
+          </span>
+          <h2>{{palList[0].species}}</h2>
+      </div> 
      </div>
      <div #carouselImg class="carousel-img">
-        <img src="{{imgList[1].src}}" alt="{{imgList[1].name}}">
+        <img src="{{palList[1].photos[1]}}" alt="{{palList[1].name}}">
+        <div class="text-card">
+          <span class="d-flex flex-row">
+              <h2 class="mb-0" style="font-weight: 700;">{{palList[1].name}}</h2>
+              &nbsp;
+              <h2 class="mb-0">{{palList[1].age}}</h2>
+          </span>
+          <h2>{{palList[1].species}}</h2>
+      </div> 
      </div>
     
     
