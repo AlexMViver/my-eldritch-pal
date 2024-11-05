@@ -16,7 +16,8 @@ export class GetPalListService {
         age: "794",
         species: "Eyeballer",
         rating: 5,
-        photos: ["assets/images/Temp3.jpg","assets/images/Temp2.jpg","assets/images/Temp.jpg"]
+        photos: ["assets/images/Temp3.jpg","assets/images/Temp2.jpg","assets/images/Temp.jpg"],
+        description: ""
       },
       { 
         id: "2",
@@ -24,7 +25,8 @@ export class GetPalListService {
         age: "204",
         species: "Shapeshifter",
         rating: 4.5,
-        photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"]
+        photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
+        description: `A close friend, a trusted confidant, a passionate lover. \n\nDmitry is many friends in one, capable of showing you whathever it is your heart desires.\n\nAvail yourself of Dmitry's many talents like acting, ventriloquism and state secret espionage.`
       },
       { 
         id: "3",
@@ -32,7 +34,8 @@ export class GetPalListService {
         age: "???",
         species: "Star Devourer",
         rating: 3,
-        photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"]
+        photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
+        description: ""
       },
       { 
         id: "4",
@@ -40,7 +43,8 @@ export class GetPalListService {
         age: "∞",
         species: "Grim Reaper",
         rating: 1,
-        photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"]
+        photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
+        description: ""
       },
       
       { 
@@ -49,7 +53,8 @@ export class GetPalListService {
         age: "184",
         species: "Vampire",
         rating: 3.5,
-        photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"]
+        photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
+        description: ""
       },
       { 
         id: "6",
@@ -57,7 +62,8 @@ export class GetPalListService {
         age: "42",
         species: "Human",
         rating: 5,
-        photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"]
+        photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
+        description: ""
       },
       { 
         id: "7",
@@ -65,7 +71,8 @@ export class GetPalListService {
         age: "175.000.000",
         species: "Unknown",
         rating: 5,
-        photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"]
+        photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
+        description: ""
       },
       { 
         id: "8",
@@ -73,7 +80,8 @@ export class GetPalListService {
         age: "80.000.000",
         species: "World Serpent",
         rating: 5,
-        photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"]
+        photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
+        description: ""
       },
 
       { 
@@ -82,7 +90,8 @@ export class GetPalListService {
         age: "99",
         species: "Pooh",
         rating: 4.5,
-        photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"]
+        photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
+        description: ""
       },
       { 
         id: "10",
@@ -90,7 +99,8 @@ export class GetPalListService {
         age: "175.000.001",
         species: "Outer God",
         rating: 4,
-        photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"]
+        photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
+        description: "Looking for a companion that makes time fly? With Anne time literally stops being a problem! \n\nWith her thousand-eyed gaze, tendrils that politely extend from another dimension and incomprehensible time manipulation powers, she’s the perfect pal for any sports enthusiast!"
       },
       { 
         id: "11",
@@ -98,7 +108,8 @@ export class GetPalListService {
         age: "1.738",
         species: "Lamp Genie",
         rating: 3.5,
-        photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"]
+        photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
+        description: ""
       },
     ];
   }

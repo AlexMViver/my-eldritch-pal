@@ -4,5 +4,6 @@ export class PalDTO {
     age!: string;
     species!: string;
     rating!: number;
-    photos!: string[];   
+    photos!: string[];
+    description!: string;
 }

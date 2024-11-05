@@ -1,0 +1,53 @@
+ <!-- Top of the month section -->
+<div class="container-fluid d-flex section-block section-block-longer align-items-center justify-content-start flex-column mb-5">
+    <div #topFriendContainer class="d-flex flex-column flex-lg-row w-100 flex-grow-1">
+        <!-- Text description -->
+        <div class="w-lg-25 my-1 mx-3 flex-shrink-0">
+            <div class="d-flex flex-column sticky">
+                <h4 class="text-left px-0">
+                    {{ featuredPal.name + ", " + featuredPal.species}} 
+                </h4>
+                <span class="text-left body-text px-0"
+                        > {{ featuredPal.description}} 
+                      </span>
+
+                      <button
+                      mat-flat-button
+                      aria-label="Browse button"
+                      class="browse-button mt-4 align-self-center"
+                    >
+                      <span>Meet {{featuredPal.name}}</span>
+                    </button>
+            </div>
+           
+        </div>
+
+        <!-- Images  -->
+        <div #imageContainer class="flex-grow-1 d-flex flex-row" style="max-height: 75vh;">
+            <div class="m-1">
+                <img
+                            class="w-100 h-100"
+                            src="assets/images/Temp.jpg"
+                            alt="Description of image"
+                        />
+            </div>
+            <div #topFriendAbove class="m-1 img-top">
+              <img
+                          class="w-100 h-100"
+                          src="assets/images/Temp.jpg"
+                          alt="Description of image"
+                      />
+          </div>
+          <div #topFriendBelow class="m-1 img-top">
+            <img
+                        class="w-100 h-100"
+                        src="assets/images/Temp.jpg"
+                        alt="Description of image"
+                    />
+        </div>
+         
+          
+        </div>
+    </div>
+
+</div>

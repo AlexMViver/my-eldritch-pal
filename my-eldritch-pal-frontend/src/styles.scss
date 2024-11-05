@@ -31,7 +31,19 @@ body {
     font-size: 18px; 
 }
 
+.section-block {
+  height: calc(100vh - 72px);
+  align-items: center;
+  justify-content: center;
+}
 
+@media (min-width: 992px) {
+  .section-block-longer {
+      height: calc(125vh - 72px);
+      align-items: center;
+      justify-content: center;
+  }
+}
 
 
 @media (min-width: 992px) { /* Large screens and up */

@@ -50,7 +50,6 @@
   </div>
 
   <!-- Showreel -->
-
   <app-showreel></app-showreel>
 
   <!-- Second text section -->
@@ -79,9 +78,9 @@
       >
         <div class="container-fluid">
           <div class="row col-12 d-flex align-items-center px-1 px-lg-5">
-            <h2 class="text-center title">
+            <h1 class="text-center title">
               An otherwordly being that fits every taste
-            </h2>
+            </h1>
             <span class="text-center mt-4 body-text"
               >Why settle for the mundane warmth of human companionship or the
               chilly embrace of the Grim Reaper? At MyEldritchPal, we offer a
@@ -110,57 +109,13 @@
   </div>
 
 <!-- Top of the month section -->
-<div class="container-fluid d-flex section-block section-block-longer align-items-center justify-content-start flex-column">
-    <div class="mb-4">
-            <h2
-            class="align-items-center justify-content-center text-center title">
-            Top friends of the month
-          </h2>
-    </div>
-
-    <div #topFriendContainer class="d-flex flex-column flex-lg-row w-100 flex-grow-1">
-        <!-- Text description -->
-        <div class="w-lg-25 m-3 flex-shrink-0" style="background: red;">
-            <div class="d-flex flex-column sticky">
-                <h4 class="text-left px-0">
-                    Dmitry, Shapeshifter
-                </h4>
-                <span class="text-left body-text px-0"
-                        >Why settle for the mundane warmth of human companionship or the
-                        chilly embrace of the Grim Reaper? At MyEldritchPal, we offer a
-                      </span>
-            </div>
-           
-        </div>
-
-        <!-- Images  -->
-        <div #imageContainer class="flex-grow-1 d-flex flex-row" style="max-height: 75vh;">
-            <div class="w-50 m-3">
-                <img
-                            class="w-100 h-100"
-                            src="assets/images/Temp.jpg"
-                            alt="Description of image"
-                        />
-            </div>
-            <div class="w-50 m-3 d-flex flex-column">
-                <div #topFriendAbove class="w-100 h-50 pb-3 img-top">
-                    <img
-                    class="w-100 h-100"
-                    src="assets/images/Temp.jpg"
-                    alt="Description of image"/>
-                </div>
-
-                <div #topFriendBelow class="w-100 h-50 pt-3 img-top">
-                    <img
-                    class="w-100 h-100"
-                    src="assets/images/Temp.jpg"
-                    alt="Description of image"/>
-                </div>
-            </div>
-           
-
-        </div>
-    </div>
-
+<div class="d-flex align-items-center justify-content-center my-5">
+    <h1
+    class="align-items-center justify-content-center text-center title">
+    Top pals of the month
+    </h1>
 </div>
 
+<app-top-month [featuredPal]="palList[1]"></app-top-month>
+
+<app-top-month [featuredPal]="palList[9]"></app-top-month>

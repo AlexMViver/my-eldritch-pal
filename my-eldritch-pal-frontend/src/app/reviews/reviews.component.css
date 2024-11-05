@@ -1,0 +1,11 @@
+.review-reel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.card-container {
+    min-width: 400px;
+    width: 70%;
+}
