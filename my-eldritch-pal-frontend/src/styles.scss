@@ -34,3 +34,24 @@ body {
 
 
 
+@media (min-width: 992px) { /* Large screens and up */
+  .w-lg-25 {
+    width: 25%;
+  }
+
+  .w-lg-50 {
+    width: 50%;
+  }
+
+  .w-lg-75 {
+    width: 75%;
+  }
+
+  .w-lg-100 {
+    width: 100%;
+  }
+}
+
+
+
+

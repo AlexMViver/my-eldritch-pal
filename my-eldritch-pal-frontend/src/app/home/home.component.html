@@ -1,78 +1,166 @@
 <div>
-    <!-- Home Image section -->
-    <div class="title-image">
-        <img src="assets/images/Temp.jpg" alt="Description of image">
+  <!-- Home Image section -->
+  <div class="title-image">
+    <img src="assets/images/Temp.jpg" alt="Description of image" />
+  </div>
+
+  <!-- First text section -->
+  <div class="container-fluid section-block">
+    <div class="row w-100 h-100">
+      <div
+        class="col-12 col-lg-6 d-flex align-items-center justify-content-center order-2 order-lg-1"
+      >
+        <img
+          class="small-image"
+          src="assets/images/Temp.jpg"
+          alt="Description of image"
+        />
+      </div>
+      <div
+        class="col-12 col-lg-6 d-flex align-items-center justify-content-center order-1 order-lg-2"
+      >
+        <div class="container-fluid">
+          <div class="row col-12 d-flex align-items-center px-1 px-lg-5">
+            <h2 class="text-center title">
+              Meet lovely beings who are DYING to meet you
+            </h2>
+            <span class="text-center mt-4 body-text"
+              >Have you ever felt that the mundanity of life was catching on to
+              you? Here at, My Eldritch Pal we strive to provide you with the
+              chance to meet beings who will rock your world. From Deep Ones to
+              <span class="blurred-text">Ajshw dhshdk ashjs</span>, we have any
+              being your heart could ever desire, and more!
+            </span>
+          </div>
+
+          <div
+            class="row col-12 d-flex align-items-center justify-content-center px-5"
+          >
+            <button
+              mat-flat-button
+              aria-label="Browse button"
+              class="browse-button mt-4"
+            >
+              <span>Browse</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Showreel -->
+
+  <app-showreel></app-showreel>
+
+  <!-- Second text section -->
+  <div class="container-fluid section-block">
+    <div class="row w-100 h-100">
+      <div
+        class="col-6 col-lg-3 d-flex align-items-center justify-content-center order-2 order-lg-1"
+      >
+        <img
+          class="small-image"
+          src="assets/images/Temp.jpg"
+          alt="Description of image"
+        />
+      </div>
+      <div
+        class="col-6 col-lg-3 d-flex align-items-center justify-content-center order-3 order-lg-3"
+      >
+        <img
+          class="small-image"
+          src="assets/images/Temp.jpg"
+          alt="Description of image"
+        />
+      </div>
+      <div
+        class="col-12 col-lg-6 d-flex align-items-center justify-content-center order-1 order-lg-2"
+      >
+        <div class="container-fluid">
+          <div class="row col-12 d-flex align-items-center px-1 px-lg-5">
+            <h2 class="text-center title">
+              An otherwordly being that fits every taste
+            </h2>
+            <span class="text-center mt-4 body-text"
+              >Why settle for the mundane warmth of human companionship or the
+              chilly embrace of the Grim Reaper? At MyEldritchPal, we offer a
+              carefully curated collection of otherworldly beings, each more
+              mesmerizing than the last! Whether you’re seeking a cozy hug or
+              yearning to unravel the mysteries lurking beyond the veil, we’ve
+              got just the eldritch friend for you. Embrace the unknown—your
+              next adventure awaits!
+            </span>
+          </div>
+
+          <div
+            class="row col-12 d-flex align-items-center justify-content-center px-5"
+          >
+            <button
+              mat-flat-button
+              aria-label="Browse button"
+              class="browse-button mt-4"
+            >
+              <span>Browse</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Top of the month section -->
+<div class="container-fluid d-flex section-block section-block-longer align-items-center justify-content-start flex-column">
+    <div class="mb-4">
+            <h2
+            class="align-items-center justify-content-center text-center title">
+            Top friends of the month
+          </h2>
     </div>
 
-    <!-- First text section -->
-    <div class="container section-block">
-        <div class="row w-100 h-100">
-            <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center order-2 order-lg-1">
-                <img class="small-image" src="assets/images/Temp.jpg" alt="Description of image">
+    <div #topFriendContainer class="d-flex flex-column flex-lg-row w-100 flex-grow-1">
+        <!-- Text description -->
+        <div class="w-lg-25 m-3 flex-shrink-0" style="background: red;">
+            <div class="d-flex flex-column sticky">
+                <h4 class="text-left px-0">
+                    Dmitry, Shapeshifter
+                </h4>
+                <span class="text-left body-text px-0"
+                        >Why settle for the mundane warmth of human companionship or the
+                        chilly embrace of the Grim Reaper? At MyEldritchPal, we offer a
+                      </span>
             </div>
-            <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center order-1 order-lg-2">
-                <div class="container">
-                    <div class="row col-12 d-flex align-items-center px-1 px-lg-5">
-                        <h2 class="text-center title">Meet lovely beings who are DYING to meet you</h2>
-                        <span class="text-center mt-4 body-text">Have you ever felt that the mundanity of life was catching on to you? 
-                            Here at, My Eldritch Pal we strive to provide you with the chance to meet beings who will rock your world.
-                            From Deep Ones to <span class="blurred-text">Ajshw dhshdk ashjs</span>, we have any being your heart could ever desire, and more!
-                        </span>
-                    </div>
-    
-                    <div class="row col-12 d-flex align-items-center justify-content-center px-5">
-                        <button
-                            mat-flat-button
-                            aria-label="Browse button"
-                            class="browse-button mt-4">
-                            <span>Browse</span>
-                        </button>
-                    </div>
-                  </div>
-               
+           
+        </div>
+
+        <!-- Images  -->
+        <div #imageContainer class="flex-grow-1 d-flex flex-row" style="max-height: 75vh;">
+            <div class="w-50 m-3">
+                <img
+                            class="w-100 h-100"
+                            src="assets/images/Temp.jpg"
+                            alt="Description of image"
+                        />
             </div>
+            <div class="w-50 m-3 d-flex flex-column">
+                <div #topFriendAbove class="w-100 h-50 pb-3 img-top">
+                    <img
+                    class="w-100 h-100"
+                    src="assets/images/Temp.jpg"
+                    alt="Description of image"/>
+                </div>
+
+                <div #topFriendBelow class="w-100 h-50 pt-3 img-top">
+                    <img
+                    class="w-100 h-100"
+                    src="assets/images/Temp.jpg"
+                    alt="Description of image"/>
+                </div>
+            </div>
+           
+
         </div>
     </div>
 
-    <!-- Showreel --> 
-
-<app-showreel></app-showreel>
-
-    <!-- Second text section -->
-    <div class="container section-block">
-        <div class="row w-100 h-100">
-            <div class="col-6 col-lg-3 d-flex align-items-center justify-content-center order-2 order-lg-1">
-                <img class="small-image" src="assets/images/Temp.jpg" alt="Description of image">
-            </div>
-            <div class="col-6 col-lg-3 d-flex align-items-center justify-content-center order-3 order-lg-3">
-                <img class="small-image" src="assets/images/Temp.jpg" alt="Description of image">
-            </div>
-            <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center order-1 order-lg-2">
-                <div class="container">
-                    <div class="row col-12 d-flex align-items-center px-1 px-lg-5">
-                        <h2 class="text-center title">An otherwordly being that fits every taste</h2>
-                        <span class="text-center mt-4 body-text">Why settle for the mundane warmth of human companionship or the chilly embrace of the Grim Reaper? 
-                            At MyEldritchPal, we offer a carefully curated collection of otherworldly beings, each more mesmerizing than the last! 
-                            Whether you’re seeking a cozy hug or yearning to unravel the mysteries lurking beyond the veil, 
-                            we’ve got just the eldritch friend for you. Embrace the unknown—your next adventure awaits!
-                        </span>
-                    </div>
-    
-                    <div class="row col-12 d-flex align-items-center justify-content-center px-5">
-                        <button
-                            mat-flat-button
-                            aria-label="Browse button"
-                            class="browse-button mt-4">
-                            <span>Browse</span>
-                        </button>
-                    </div>
-                  </div>
-               
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Top of the month section -->
 </div>
 

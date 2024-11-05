@@ -20,7 +20,7 @@ export class GetPalListService {
       },
       { 
         id: "2",
-        name: "Ragoth",
+        name: "Dmitry",
         age: "204",
         species: "Shapeshifter",
         rating: 4.5,

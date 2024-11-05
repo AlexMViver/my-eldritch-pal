@@ -28,7 +28,7 @@ export class ShowreelComponent {
 
   constructor(private getPalListService: GetPalListService){
     this.palList = this.getPalListService.getPals().slice(0,6);
-    this.idx = this.palList.length/2;
+    this.idx = this.palList.length/2 - 1;
     this.maxIdx = this.palList.length;
   }
 

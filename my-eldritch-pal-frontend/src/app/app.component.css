@@ -1,5 +1,6 @@
 .sidenav-cont {
     background: var(--primary-background);
+    overflow: visible;
 }
 
 .toolbar {
