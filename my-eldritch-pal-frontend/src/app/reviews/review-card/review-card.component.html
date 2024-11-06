@@ -1,3 +1,4 @@
-<div class="container-fluid">
- abc
+<div class="container-fluid review-card m-5" [ngClass]="isSelected ? 'selected' : null" (click)="cardClicked()">
+    <span class="review-text">"{{reviewText}}"</span>
+    <span class="reviewer-name mt-3">{{reviewer}}</span>
 </div>

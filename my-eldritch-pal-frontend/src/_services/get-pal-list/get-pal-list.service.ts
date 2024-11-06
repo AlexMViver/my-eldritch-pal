@@ -49,7 +49,7 @@ export class GetPalListService {
       
       { 
         id: "5",
-        name: "Claude",
+        name: "Victor",
         age: "184",
         species: "Vampire",
         rating: 3.5,

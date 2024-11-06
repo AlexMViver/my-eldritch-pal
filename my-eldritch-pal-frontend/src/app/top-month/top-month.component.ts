@@ -62,8 +62,5 @@ export class TopMonthComponent implements OnInit, OnDestroy {
     //Apply the translation
     this.topfriendImg1Translate = translateY/2;
     this.topfriendImg2Translate = translateY;
-
-    //this.topFriendAboveImg.nativeElement.style.transform = `translateY(${translateY/2}px)`;
-    //this.topFriendBelowImg.nativeElement.style.transform = `translateY(${translateY}px)`;
   }
 }
