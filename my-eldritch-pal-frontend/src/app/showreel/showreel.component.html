@@ -21,7 +21,7 @@
 
     <ng-template ngFor let-item [ngForOf]="palList" let-i="index" >
         <div #carouselImg class="carousel-img" (mouseenter)="cyclePhotos(item)" (mouseleave)="stopCyclingPhotos()">
-            <img *ngFor="let photo of item.photos; let i = index" [ngClass]="{'active': (hoveredPal == item.id && currentImageIdx === i) || (hoveredPal != item.id && i==0)}"  src="{{item.photos[i]}}" alt="{{item.name}}">
+            <img loading="eager" *ngFor="let photo of item.photos; let i = index" [ngClass]="{'active': (hoveredPal == item.id && currentImageIdx === i) || (hoveredPal != item.id && i==0)}"  src="{{item.photos[i]}}" alt="{{item.name}}">
             <div class="text-card">
                 <span class="d-flex flex-row">
                     <h2 class="mb-0" style="font-weight: 700;">{{item.name}}</h2>
@@ -35,7 +35,7 @@
 
     <!-- Add the 2 first images statically to give ilusion of looping -->
     <div #carouselImg class="carousel-img" (mouseenter)="cyclePhotos(palList[0])" (mouseleave)="stopCyclingPhotos()">
-      <img *ngFor="let photo of palList[0].photos; let i = index" [ngClass]="{'active': (hoveredPal == palList[0].id && currentImageIdx === i) || (hoveredPal != palList[0].id && i==0)}"  src="{{palList[0].photos[i]}}" alt="{{palList[0].name}}">
+      <img loading="eager" *ngFor="let photo of palList[0].photos; let i = index" [ngClass]="{'active': (hoveredPal == palList[0].id && currentImageIdx === i) || (hoveredPal != palList[0].id && i==0)}"  src="{{palList[0].photos[i]}}" alt="{{palList[0].name}}">
       <div class="text-card">
           <span class="d-flex flex-row">
               <h2 class="mb-0" style="font-weight: 700;">{{palList[0].name}}</h2>
@@ -45,8 +45,8 @@
           <h2>{{palList[0].species}}</h2>
       </div> 
     </div>
-    <div #carouselImg class="carousel-img" (mouseenter)="cyclePhotos(palList[1])" (mouseleave)="stopCyclingPhotos()">
-      <img *ngFor="let photo of palList[1].photos; let i = index" [ngClass]="{'active': (hoveredPal == palList[1].id && currentImageIdx === i) || (hoveredPal != palList[1].id && i==0)}"  src="{{palList[1].photos[i]}}" alt="{{palList[1].name}}">
+    <!-- <div #carouselImg class="carousel-img" (mouseenter)="cyclePhotos(palList[1])" (mouseleave)="stopCyclingPhotos()">
+      <img  loading="eager" *ngFor="let photo of palList[1].photos; let i = index" [ngClass]="{'active': (hoveredPal == palList[1].id && currentImageIdx === i) || (hoveredPal != palList[1].id && i==0)}"  src="{{palList[1].photos[i]}}" alt="{{palList[1].name}}">
       <div class="text-card">
           <span class="d-flex flex-row">
               <h2 class="mb-0" style="font-weight: 700;">{{palList[1].name}}</h2>
@@ -55,7 +55,7 @@
           </span>
           <h2>{{palList[1].species}}</h2>
       </div> 
-    </div>
+    </div> -->
     
     
     

@@ -50,11 +50,15 @@ export class ShowreelComponent {
   }
 
   updateCarouselPosition() {
-    if(!this.carouselImg){
+    if(!this.carouselImg || typeof window==="undefined"){
       return "";
     }
 
-    const imgWidth = this.carouselImg.nativeElement.offsetWidth;
+    const imgStyle = window.getComputedStyle(this.carouselImg.nativeElement,null);
+    const ml = +imgStyle.marginLeft.slice(0,-2);
+    const mr = +imgStyle.marginRight.slice(0,-2);;
+
+    const imgWidth = this.carouselImg.nativeElement.offsetWidth +ml+mr;
     const offSet = this.idx*imgWidth;
     return `translateX(-${offSet}px)`
   }
