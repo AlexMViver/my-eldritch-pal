@@ -6,12 +6,13 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { HomeComponent } from "./home/home.component";
 import { ReviewsComponent } from './reviews/reviews.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, MatSidenavModule, MatButtonModule, MatIconModule,
-    HeaderComponent, HomeComponent, ReviewsComponent],
+    HeaderComponent, HomeComponent, ReviewsComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
