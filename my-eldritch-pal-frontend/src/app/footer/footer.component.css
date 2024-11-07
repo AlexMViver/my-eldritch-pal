@@ -1,6 +1,6 @@
 .footer {
     background: var(--primary-black);
-    height: 5em;
+    min-height: 4em;
     overflow: hidden;
 }
 

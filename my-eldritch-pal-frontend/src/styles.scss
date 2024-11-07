@@ -12,8 +12,41 @@ $my-theme: mat.define-theme((
   )
 ));
 
-:root {
+html {
+  @include mat.core();
   @include mat.all-component-themes($my-theme);
+  @include mat.all-component-typographies($my-theme);
+
+
+  //Material overrides
+
+  --mat-select-panel-background-color: var(--primary-background);
+  // --mat-option-focus-state-layer-color: transparent;
+
+  --mat-form-field-state-layer-color: var(--primary-background);
+
+  --mat-full-pseudo-checkbox-selected-icon-color: transparent;
+  --mat-full-pseudo-checkbox-unselected-icon-color: transparent;
+  --mat-full-pseudo-checkbox-selected-checkmark-color: var(--primary-black);
+  --mdc-filled-text-field-container-color: var(--primary-background); 
+  --mdc-filled-text-field-focus-label-text-color: var(--primary-black);
+
+  --mdc-filled-text-field-caret-color: var(--primary-black);
+  --mdc-filled-text-field-focus-active-indicator-color: var(--primary-black);
+  --mdc-filled-text-field-focus-label-text-color: var(--primary-black);
+
+  --mat-select-focused-arrow-color: var(--primary-black);
+
+
+  --mat-paginator-container-background-color: transparent;
+  --mat-option-selected-state-layer-color: var(--primary-gray-light);
+  
+}
+
+:root {
+  // @include mat.all-component-themes($my-theme);
+  // @include mat.all-component-typographies($my-theme);
+
     --primary-black: #000000;
     --primary-white: #ffffff;
     --primary-background: #ffffff;
