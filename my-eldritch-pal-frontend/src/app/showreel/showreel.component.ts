@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { GetPalListService } from '../../_services/get-pal-list/get-pal-list.service';
@@ -12,7 +12,7 @@ import { PalDTO } from '../../_dtos/pal.dto';
   templateUrl: './showreel.component.html',
   styleUrl: './showreel.component.css'
 })
-export class ShowreelComponent {
+export class ShowreelComponent implements AfterViewInit{
 
   @ViewChild('carouselImg', { static: false, read:ElementRef }) carouselImg!: ElementRef;
   @ViewChild('carousel', { static: false, read:ElementRef }) carousel!: ElementRef;
@@ -26,7 +26,7 @@ export class ShowreelComponent {
   idx : number;
   maxIdx : number;
 
-  constructor(private getPalListService: GetPalListService){
+  constructor(private getPalListService: GetPalListService,private cdref: ChangeDetectorRef){
     this.palList = this.getPalListService.getPals().slice(0,6);
     this.idx = this.palList.length/2 - 1;
     this.maxIdx = this.palList.length;
@@ -82,6 +82,10 @@ export class ShowreelComponent {
     
     this.hoveredPal= "";
     this.currentImageIdx = 0;
+  }
+
+  ngAfterViewInit(): void {
+    this.cdref.detectChanges();
   }
 
 

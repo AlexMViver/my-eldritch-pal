@@ -17,7 +17,9 @@ export class GetPalListService {
         species: "Eyeballer",
         rating: 5,
         photos: ["assets/images/Temp3.jpg","assets/images/Temp2.jpg","assets/images/Temp.jpg"],
-        description: ""
+        description: "",
+        eldritch_level: 2,
+        gender: "F"
       },
       { 
         id: "2",
@@ -26,7 +28,9 @@ export class GetPalListService {
         species: "Shapeshifter",
         rating: 4.5,
         photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
-        description: `A close friend, a trusted confidant, a passionate lover. \n\nDmitry is many friends in one, capable of showing you whathever it is your heart desires.\n\nAvail yourself of Dmitry's many talents like acting, ventriloquism and state secret espionage.`
+        description: `A close friend, a trusted confidant, a passionate lover. \n\nDmitry is many friends in one, capable of showing you whathever it is your heart desires.\n\nAvail yourself of Dmitry's many talents like acting, ventriloquism and state secret espionage.`,
+        eldritch_level: 0,
+        gender: "?"
       },
       { 
         id: "3",
@@ -35,7 +39,9 @@ export class GetPalListService {
         species: "Star Devourer",
         rating: 3,
         photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
-        description: ""
+        description: "",
+        eldritch_level: 2,
+        gender: "M"
       },
       { 
         id: "4",
@@ -44,7 +50,9 @@ export class GetPalListService {
         species: "Grim Reaper",
         rating: 1,
         photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
-        description: ""
+        description: "",
+        eldritch_level: 1,
+        gender: "?"
       },
       
       { 
@@ -54,7 +62,9 @@ export class GetPalListService {
         species: "Vampire",
         rating: 3.5,
         photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
-        description: ""
+        description: "",
+        eldritch_level: 0,
+        gender: "M"
       },
       { 
         id: "6",
@@ -63,7 +73,9 @@ export class GetPalListService {
         species: "Human",
         rating: 5,
         photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
-        description: ""
+        description: "",
+        eldritch_level: 2,
+        gender: "M"
       },
       { 
         id: "7",
@@ -72,7 +84,9 @@ export class GetPalListService {
         species: "Unknown",
         rating: 5,
         photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
-        description: ""
+        description: "",
+        eldritch_level: 2,
+        gender: "?"
       },
       { 
         id: "8",
@@ -81,7 +95,9 @@ export class GetPalListService {
         species: "World Serpent",
         rating: 5,
         photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
-        description: ""
+        description: "",
+        eldritch_level: 1,
+        gender: "M"
       },
 
       { 
@@ -91,7 +107,9 @@ export class GetPalListService {
         species: "Pooh",
         rating: 4.5,
         photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
-        description: ""
+        description: "",
+        eldritch_level: 2,
+        gender: "M"
       },
       { 
         id: "10",
@@ -100,7 +118,9 @@ export class GetPalListService {
         species: "Outer God",
         rating: 4,
         photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
-        description: "Looking for a companion that makes time fly? With Anne time literally stops being a problem! \n\nWith her thousand-eyed gaze, tendrils that politely extend from another dimension and incomprehensible time manipulation powers, she’s the perfect pal for any sports enthusiast!"
+        description: "Looking for a companion that makes time fly? With Anne time literally stops being a problem! \n\nWith her thousand-eyed gaze, tendrils that politely extend from another dimension and incomprehensible time manipulation powers, she’s the perfect pal for any sports enthusiast!",
+        eldritch_level: 2,
+        gender: "F"
       },
       { 
         id: "11",
@@ -109,7 +129,9 @@ export class GetPalListService {
         species: "Lamp Genie",
         rating: 3.5,
         photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
-        description: ""
+        description: "",
+        eldritch_level: 1,
+        gender: "F"
       },
     ];
   }

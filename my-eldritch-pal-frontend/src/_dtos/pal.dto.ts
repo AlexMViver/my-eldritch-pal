@@ -6,4 +6,6 @@ export class PalDTO {
     rating!: number;
     photos!: string[];
     description!: string;
+    eldritch_level!: number;
+    gender!: string;
 }
