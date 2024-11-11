@@ -1,0 +1,94 @@
+<div class="container-fluid">
+    <div class="row mt-3">
+        <div class="photo-container col-12 col-md-6">
+            <img
+            class="photo"
+            src="{{pal.photos[0]}}"
+            alt="Description of image"
+          />
+        </div>
+
+
+        <div class="d-flex col-12 col-md-6 align-items-center">
+            <div>
+                <div class="row mx-1 mt-3 mt-md-0">
+                    <h2 class="col-6 col-md-12 mb-0 title-text" style="font-weight: 700; font-size: 30px;">{{pal.name}}</h2>
+                    <span class="col-6 col-md-12 mb-2 price">{{pal.price | number : '1.2-2'}} €</span>
+
+                    <div class="col-12 d-flex mb-1">
+                        <span class="title-text col-6">Species</span>
+                        <span class="sub-text col-6">{{pal.species}}</span>
+                    </div>
+
+                    <div class="col-12 d-flex mb-1">
+                        <span class="title-text col-6">Gender</span>
+                        <span class="sub-text col-6">{{pal.gender == "F" ? "Female" : (pal.gender == "M" ? "Male" : "???")}}</span>
+                    </div>
+
+                    <div class="col-12 d-flex mb-2">
+                        <span class="title-text col-6">Age</span>
+                        <span class="sub-text col-6">{{pal.age}} years young</span>
+                    </div>
+
+                    <hr class="solid mt-0" style="color:black">
+
+                    <div class="col-12 mb-0 d-flex">
+                        <mat-accordion class="w-100">
+                            <mat-expansion-panel [expanded]="true" class="mat-elevation-z0" style="background: var(--primary-white)" hideToggle>
+                                <mat-expansion-panel-header class="px-0">
+                                <mat-panel-title class="d-flex mx-0">
+                                    <span class="title-text">Description </span>
+                                    <i class="fa fa-angle-down ms-auto"></i>
+                                </mat-panel-title>
+                                </mat-expansion-panel-header>
+                                <span class="sub-text">
+                                    {{pal.description}}
+                                </span>
+                            </mat-expansion-panel>
+                        </mat-accordion>
+                    </div>
+
+                    <hr class="solid mt-0" style="color:var(--primary-black)">
+
+                    <div class="col-12 d-flex">
+                        <span class="title-text col-12">Classification</span>
+                    </div>
+                    <div class="col-12 d-flex align-items-center mb-1">
+                        <span class="sub-text me-2">{{pal.rating}}</span>
+                        <div>
+                            @for (star of [0,1,2,3,4]; track $index) {
+                                <i class="fa" [ngClass]="{'fa-star': $index+1 <= pal.rating, 'fa-star-half-o': $index + 0.5 <= pal.rating && $index+1 > pal.rating,
+                                'fa-star-o': $index > pal.rating,
+
+                                }"></i>
+                            }
+                        </div>
+                    </div>
+                </div> 
+
+
+                <div class="col-12 d-flex align-items-center justify-content-center">
+                    <button
+                    mat-flat-button
+                    aria-label="Browse button"
+                    class="rent-button mt-4"
+                    >
+                    <span class="mx-2">Rent</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt-5">
+
+    <hr class="solid" style="color:var(--primary-black)">
+
+    <h2 class="text-left separator-title mt-5">
+        Others also enjoyed the company of
+      </h2>
+
+</div>
+
+<app-showreel></app-showreel>

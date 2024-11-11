@@ -8,4 +8,5 @@ export class PalDTO {
     description!: string;
     eldritch_level!: number;
     gender!: string;
+    price!: number;
 }

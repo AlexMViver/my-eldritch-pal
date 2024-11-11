@@ -19,7 +19,8 @@ export class GetPalListService {
         photos: ["assets/images/Temp3.jpg","assets/images/Temp2.jpg","assets/images/Temp.jpg"],
         description: "",
         eldritch_level: 2,
-        gender: "F"
+        gender: "F",
+        price: 100.00,
       },
       { 
         id: "2",
@@ -30,7 +31,8 @@ export class GetPalListService {
         photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
         description: `A close friend, a trusted confidant, a passionate lover. \n\nDmitry is many friends in one, capable of showing you whathever it is your heart desires.\n\nAvail yourself of Dmitry's many talents like acting, ventriloquism and state secret espionage.`,
         eldritch_level: 0,
-        gender: "?"
+        gender: "?",
+        price: 100.00,
       },
       { 
         id: "3",
@@ -41,7 +43,8 @@ export class GetPalListService {
         photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
         description: "",
         eldritch_level: 2,
-        gender: "M"
+        gender: "M",
+        price: 100.00,
       },
       { 
         id: "4",
@@ -52,7 +55,8 @@ export class GetPalListService {
         photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
         description: "",
         eldritch_level: 1,
-        gender: "?"
+        gender: "?",
+        price: 100.00,
       },
       
       { 
@@ -64,7 +68,8 @@ export class GetPalListService {
         photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
         description: "",
         eldritch_level: 0,
-        gender: "M"
+        gender: "M",
+        price: 100.00,
       },
       { 
         id: "6",
@@ -75,7 +80,8 @@ export class GetPalListService {
         photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
         description: "",
         eldritch_level: 2,
-        gender: "M"
+        gender: "M",
+        price: 100.00,
       },
       { 
         id: "7",
@@ -86,7 +92,8 @@ export class GetPalListService {
         photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
         description: "",
         eldritch_level: 2,
-        gender: "?"
+        gender: "?",
+        price: 100.00,
       },
       { 
         id: "8",
@@ -97,7 +104,8 @@ export class GetPalListService {
         photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
         description: "",
         eldritch_level: 1,
-        gender: "M"
+        gender: "M",
+        price: 100.00,
       },
 
       { 
@@ -109,7 +117,8 @@ export class GetPalListService {
         photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
         description: "",
         eldritch_level: 2,
-        gender: "M"
+        gender: "M",
+        price: 100.00,
       },
       { 
         id: "10",
@@ -120,7 +129,8 @@ export class GetPalListService {
         photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
         description: "Looking for a companion that makes time fly? With Anne time literally stops being a problem! \n\nWith her thousand-eyed gaze, tendrils that politely extend from another dimension and incomprehensible time manipulation powers, she’s the perfect pal for any sports enthusiast!",
         eldritch_level: 2,
-        gender: "F"
+        gender: "F",
+        price: 100.00,
       },
       { 
         id: "11",
@@ -131,12 +141,17 @@ export class GetPalListService {
         photos: ["assets/images/Temp.jpg","assets/images/Temp2.jpg","assets/images/Temp3.jpg"],
         description: "",
         eldritch_level: 1,
-        gender: "F"
+        gender: "F",
+        price: 100.00,
       },
     ];
   }
 
   getPals() : PalDTO[] {
     return this.staticPalList;
+  }
+
+  getPal(id: string | null) : PalDTO | undefined {
+    return this.staticPalList.find((elem) => elem.id===id);
   }
 }

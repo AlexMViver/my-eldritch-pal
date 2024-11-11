@@ -1,0 +1,38 @@
+.photo-container {
+    min-width: 50%;  
+    display: flex;
+    justify-content: center;
+}
+
+.photo {
+    max-width: calc(min(400px, 100%));
+    aspect-ratio: 3/4; 
+    border-radius: 10%;
+}
+
+.title-text {
+    letter-spacing: 0.1em;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.price {
+    font-size:20px;
+    color: var(--text-gray);
+}
+
+.sub-text {
+    color: var(--text-gray);
+    font-size: 15px;
+}
+
+.rent-button {
+    background: var(--primary-black);
+    width: fit-content;
+    letter-spacing: 0.1em; 
+}
+
+.separator-title {
+    font-weight: bolder;
+    text-transform: uppercase;
+}

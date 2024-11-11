@@ -1,6 +1,7 @@
 //Custom material theming
 @use '@angular/material' as mat;
 
+
 $my-theme: mat.define-theme((
   color: (
     theme-type: light,
@@ -16,6 +17,9 @@ html {
   @include mat.core();
   @include mat.all-component-themes($my-theme);
   @include mat.all-component-typographies($my-theme);
+
+  //Remove bootstrap smooth scrolling
+  scroll-behavior: auto !important;
 
 
   //Material overrides
@@ -40,6 +44,10 @@ html {
 
   --mat-paginator-container-background-color: transparent;
   --mat-option-selected-state-layer-color: var(--primary-gray-light);
+
+
+  --mat-expansion-header-hover-state-layer-color: inherit;
+  --mat-expansion-container-shape: 0px;
   
 }
 
@@ -57,7 +65,8 @@ html {
 
 
 // General css
-html, body { height: auto; }
+html, body { height: auto; 
+}
 body { 
     background: var(--primary-background);
     margin: 0; 
