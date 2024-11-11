@@ -56,7 +56,7 @@
     <div class="container-fluid d-flex flex-column">
     
       <div #rentGrid class="container-fluid rent-grid">
-          <div *ngFor="let pal of visiblePalList; let i = index" class="rent-image-container">
+          <div *ngFor="let pal of visiblePalList; let i = index" class="rent-image-container" (click)="navigateRent(pal)">
             <img
               class="rent-image"
               src="{{pal.photos[0]}}"

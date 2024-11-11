@@ -3,6 +3,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
 import {MatButtonModule} from '@angular/material/button';
 import { PalDTO } from '../../_dtos/pal.dto';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-top-month',
@@ -28,7 +29,7 @@ export class TopMonthComponent implements OnInit, OnDestroy {
 
   private _mobileQueryListener: () => void;
 
-  constructor (private media: MediaMatcher, private changeDetectorRef: ChangeDetectorRef){
+  constructor (private media: MediaMatcher, private changeDetectorRef: ChangeDetectorRef, private router: Router){
     this.mobileQuery = this.media.matchMedia('(min-width: 992px)');
     this._mobileQueryListener = () => this.onMediaChange();
     this.mobileQuery.addListener(this._mobileQueryListener);
@@ -62,5 +63,9 @@ export class TopMonthComponent implements OnInit, OnDestroy {
     //Apply the translation
     this.topfriendImg1Translate = translateY/2;
     this.topfriendImg2Translate = translateY;
+  }
+
+  navigateRent() {
+    this.router.navigate([`rent/${this.featuredPal.id}`])
   }
 }

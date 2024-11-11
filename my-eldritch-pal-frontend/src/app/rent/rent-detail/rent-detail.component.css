@@ -29,12 +29,14 @@
     z-index: 10;
 }
 
-.photo-nav span {
+.photo-nav button {
     transition: opacity 1s ease, transform 1s ease;
     opacity: 0;
+    background: var(--primary-gray);
+    transform: scale(0.7);
 }
 
-.photo-nav:hover span {
+.photo-nav:hover button {
     opacity: 1;
 }
 

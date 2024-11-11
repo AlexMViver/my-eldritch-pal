@@ -12,7 +12,7 @@
                     </div>
 
                     <!-- Navigation -->
-                    <div class="photo-nav left-nav d-flex align-items-center justify-content-center" (click)="selectPhoto(photosCurrentIdx-1)">
+                    <!-- <div class="photo-nav left-nav d-flex align-items-center justify-content-center" (click)="selectPhoto(photosCurrentIdx-1)">
                         <span class="fa-stack" style="vertical-align: top;">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fa fa-arrow-left fa-stack-1x fa-inverse"></i>
@@ -23,7 +23,29 @@
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fa fa-arrow-right fa-stack-1x fa-inverse"></i>
                         </span>
+                    </div> -->
+
+                    <div class="photo-nav left-nav d-flex align-items-center justify-content-center" (click)="selectPhoto(photosCurrentIdx-1)">
+                        <button
+                        mat-icon-button
+                        aria-label="Search icon"
+                        class="floating-button"
+                      >
+                        <mat-icon>arrow_back</mat-icon>
+                      </button>
                     </div>
+                    
+                    <div class="photo-nav right-nav d-flex align-items-center justify-content-center" (click)="selectPhoto(photosCurrentIdx+1)">
+                        <button
+                        mat-icon-button
+                        aria-label="Search icon"
+                        class="floating-button"
+                      >
+                        <mat-icon>arrow_forward</mat-icon>
+                      </button>
+                    </div>
+                    
+                      
 
                     <!-- Photo -->
                     <img class="photo" loading="eager" *ngFor="let photo of pal.photos; let i = index" 

@@ -4,13 +4,14 @@ import { GetPalListService } from '../../../_services/get-pal-list/get-pal-list.
 import {Location, DecimalPipe, CommonModule} from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { ShowreelComponent } from '../../showreel/showreel.component';
-import { MatButton } from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-rent-detail',
   standalone: true,
-  imports: [DecimalPipe, ShowreelComponent, MatButton,MatExpansionModule,CommonModule],
+  imports: [DecimalPipe, ShowreelComponent, MatButtonModule,MatExpansionModule,CommonModule, MatIconModule],
   templateUrl: './rent-detail.component.html',
   styleUrl: './rent-detail.component.css'
 })

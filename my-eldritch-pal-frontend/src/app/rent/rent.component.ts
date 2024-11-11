@@ -6,6 +6,7 @@ import {MatPaginatorModule, PageEvent} from '@angular/material/paginator';
 import { GetPalListService } from '../../_services/get-pal-list/get-pal-list.service';
 import { PalDTO } from '../../_dtos/pal.dto';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-rent',
@@ -41,7 +42,7 @@ export class RentComponent implements OnInit {
     {id: "?", description: '???'},
   ];
 
-  constructor (private getPalListService: GetPalListService){
+  constructor (private getPalListService: GetPalListService, private router: Router){
     this.rentForm = new FormGroup({
       category: new FormControl([], [Validators.required]),
       gender: new FormControl([], [Validators.required]),
@@ -91,6 +92,10 @@ export class RentComponent implements OnInit {
     this.visiblePalList = this.selectedPalList.slice(this.pageIndex*this.pageSize, this.pageIndex*this.pageSize + this.pageSize);
 
     if(this.rentGrid && scrollTop) this.rentGrid.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  navigateRent(pal: PalDTO) {
+    this.router.navigate([`rent/${pal.id}`])
   }
 
 }

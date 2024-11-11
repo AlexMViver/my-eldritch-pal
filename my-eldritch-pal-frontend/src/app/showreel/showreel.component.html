@@ -20,7 +20,7 @@
   <div #carousel class="carousel w-100 h-100 py-3" [style.transform]="updateCarouselPosition()">
 
     <ng-template ngFor let-item [ngForOf]="palList" let-i="index" >
-        <div #carouselImg class="carousel-img" (mouseenter)="cyclePhotos(item)" (mouseleave)="stopCyclingPhotos()">
+        <div #carouselImg class="carousel-img" (mouseenter)="cyclePhotos(item)" (mouseleave)="stopCyclingPhotos()" (click)="navigateRent(item)">
             <img loading="eager" *ngFor="let photo of item.photos; let i = index" [ngClass]="{'active': (hoveredPal == item.id && currentImageIdx === i) || (hoveredPal != item.id && i==0)}"  src="{{item.photos[i]}}" alt="{{item.name}}">
             <div class="text-card">
                 <span class="d-flex flex-row">
@@ -33,8 +33,8 @@
         </div>
     </ng-template>
 
-    <!-- Add the 2 first images statically to give ilusion of looping -->
-    <div #carouselImg class="carousel-img" (mouseenter)="cyclePhotos(palList[0])" (mouseleave)="stopCyclingPhotos()">
+    <!-- Add the first image statically to give ilusion of looping -->
+    <div #carouselImg class="carousel-img" (mouseenter)="cyclePhotos(palList[0])" (mouseleave)="stopCyclingPhotos()" (click)="navigateRent(palList[0])">
       <img loading="eager" *ngFor="let photo of palList[0].photos; let i = index" [ngClass]="{'active': (hoveredPal == palList[0].id && currentImageIdx === i) || (hoveredPal != palList[0].id && i==0)}"  src="{{palList[0].photos[i]}}" alt="{{palList[0].name}}">
       <div class="text-card">
           <span class="d-flex flex-row">
@@ -45,19 +45,6 @@
           <h2>{{palList[0].species}}</h2>
       </div> 
     </div>
-    <!-- <div #carouselImg class="carousel-img" (mouseenter)="cyclePhotos(palList[1])" (mouseleave)="stopCyclingPhotos()">
-      <img  loading="eager" *ngFor="let photo of palList[1].photos; let i = index" [ngClass]="{'active': (hoveredPal == palList[1].id && currentImageIdx === i) || (hoveredPal != palList[1].id && i==0)}"  src="{{palList[1].photos[i]}}" alt="{{palList[1].name}}">
-      <div class="text-card">
-          <span class="d-flex flex-row">
-              <h2 class="mb-0" style="font-weight: 700;">{{palList[1].name}}</h2>
-              &nbsp;
-              <h2 class="mb-0">{{palList[1].age}}</h2>
-          </span>
-          <h2>{{palList[1].species}}</h2>
-      </div> 
-    </div> -->
-    
-    
     
   </div>
 </div>

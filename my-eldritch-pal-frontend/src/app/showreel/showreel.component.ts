@@ -4,6 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { GetPalListService } from '../../_services/get-pal-list/get-pal-list.service';
 import { PalDTO } from '../../_dtos/pal.dto';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-showreel',
@@ -26,7 +27,7 @@ export class ShowreelComponent implements AfterViewInit{
   idx : number;
   maxIdx : number;
 
-  constructor(private getPalListService: GetPalListService,private cdref: ChangeDetectorRef){
+  constructor(private getPalListService: GetPalListService,private cdref: ChangeDetectorRef, private router: Router){
     this.palList = this.getPalListService.getPals().slice(0,6);
     this.idx = this.palList.length/2 - 1;
     this.maxIdx = this.palList.length;
@@ -86,6 +87,10 @@ export class ShowreelComponent implements AfterViewInit{
 
   ngAfterViewInit(): void {
     this.cdref.detectChanges();
+  }
+
+  navigateRent(pal: PalDTO) {
+    this.router.navigate([`rent/${pal.id}`])
   }
 
 
