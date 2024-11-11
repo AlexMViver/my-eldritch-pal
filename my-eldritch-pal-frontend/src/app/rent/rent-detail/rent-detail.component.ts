@@ -18,6 +18,8 @@ export class RentDetailComponent {
 
   pal!: PalDTO;
 
+  photosCurrentIdx = 0;
+
   constructor(private location: Location, private getPalListService: GetPalListService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
@@ -28,5 +30,19 @@ export class RentDetailComponent {
     const possiblePal = this.getPalListService.getPal(id);
     if(!possiblePal) this.location.back();
     else this.pal = possiblePal;
+  }
+
+  selectPhoto(index: number) {
+    const length = this.pal.photos.length;
+    // If previous clicked when at first photo
+    if(index < 0) {
+      index = length-1;
+    } 
+    // If next clicked when at last photo
+    if (index >= length) { 
+      index = 0;
+    }
+
+    this.photosCurrentIdx = index;
   }
 }

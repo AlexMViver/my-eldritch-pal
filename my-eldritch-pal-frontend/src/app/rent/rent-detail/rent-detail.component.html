@@ -1,11 +1,37 @@
 <div class="container-fluid">
     <div class="row mt-3">
-        <div class="photo-container col-12 col-md-6">
-            <img
-            class="photo"
-            src="{{pal.photos[0]}}"
-            alt="Description of image"
-          />
+        <div class="col-12 col-md-6">
+            <div class="d-flex justify-content-center">
+                <!-- Photo container -->
+                <div class="photo-container">
+                    <!-- Indicator Line Container -->
+                    <div class="indicator-lines">
+                        <div class="indicator" *ngFor="let photo of pal.photos; let i = index" (click)="selectPhoto(i)">
+                            <div class="indicator-line" [class.indicator-active]="i === photosCurrentIdx"></div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="photo-nav left-nav d-flex align-items-center justify-content-center" (click)="selectPhoto(photosCurrentIdx-1)">
+                        <span class="fa-stack" style="vertical-align: top;">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-arrow-left fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+                    <div class="photo-nav right-nav d-flex align-items-center justify-content-center" (click)="selectPhoto(photosCurrentIdx+1)">
+                        <span class="fa-stack" style="vertical-align: top;">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-arrow-right fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+
+                    <!-- Photo -->
+                    <img class="photo" loading="eager" *ngFor="let photo of pal.photos; let i = index" 
+                    [class.photo-active]="i === photosCurrentIdx" src="{{pal.photos[i]}}" alt="{{pal.name}}"/>
+                </div>
+            
+
+            </div>
         </div>
 
 
@@ -13,7 +39,7 @@
             <div>
                 <div class="row mx-1 mt-3 mt-md-0">
                     <h2 class="col-6 col-md-12 mb-0 title-text" style="font-weight: 700; font-size: 30px;">{{pal.name}}</h2>
-                    <span class="col-6 col-md-12 mb-2 price">{{pal.price | number : '1.2-2'}} €</span>
+                    <span class="col-6 col-md-12 mb-2 price px-0 px-md-2">{{pal.price | number : '1.2-2'}} €</span>
 
                     <div class="col-12 d-flex mb-1">
                         <span class="title-text col-6">Species</span>
