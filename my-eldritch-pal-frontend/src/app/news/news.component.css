@@ -1,0 +1,128 @@
+.wide-image-container {
+    height: 50vh;
+    min-height: 500px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.moving-text {
+    position: absolute;
+    top: 45%;
+    height: 1em;
+    font-size: 50px;
+    font-weight: bolder;
+    color: var(--primary-white);
+    animation: moveText 20s linear infinite;
+    text-wrap: nowrap;
+    z-index: 1;
+}
+
+@keyframes moveText {
+    0% {
+      transform: translateX(50%); /* Start from right outside the screen */
+    }
+    100% {
+      transform: translateX(-100%); /* Move to the left until it goes out of frame */
+    }
+}
+
+.body-text {
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: 0.1em; 
+    text-align: center;
+}
+
+.jumping-image-container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.small-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.jumping-image {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 1s ease, transform 0.5s ease;
+}
+
+.jump-animation-1 {
+    transform: translateX(100%) rotate(120deg); /* Initial position off-screen to the right, no rotation */
+    animation: slideInAndRotate 15s forwards infinite; /* Animation for sliding in and rotating */
+    animation-delay: 0s;
+    left: 10px;
+}
+
+.jump-animation-2 {
+    transform: translateX(100%) rotate(140deg); /* Initial position off-screen to the right, no rotation */
+    animation: slideInAndRotate2 15s forwards infinite ; /* Animation for sliding in and rotating */
+    animation-delay: 3s;
+    left: 20px;
+}
+
+
+  /* Create the sliding and rotating animation */
+@keyframes slideInAndRotate {
+    0% { /* Start entry 0s */
+      transform: translateX(200%) rotate(120deg); 
+      opacity: 0;
+    }
+    20% {   /* End entry 3s */
+        transform: translateX(0) rotate(10deg);
+        opacity: 1;
+    }
+
+    80% {   /* Start exit 12s */
+        transform: translateX(0) rotate(10deg);
+        opacity: 1;
+    }
+
+    100% { /* End exit and loop */
+        transform: translateX(200%) rotate(120deg); 
+        opacity: 0;
+    }
+  }
+
+@keyframes slideInAndRotate2 {
+    0% { /* Start entry 0s */
+      transform: translateX(200%) rotate(140deg); 
+      opacity: 0;
+    }
+    20% {   /* End entry 3s */
+        transform: translateX(0) rotate(30deg); 
+        opacity: 1;
+    }
+    40% {   /* Start exit 6s */
+        transform: translateX(0) rotate(30deg); 
+        opacity: 1;
+    }
+    60% {   /* End exit 9s */
+        transform: translateX(200%) rotate(140deg);
+        opacity: 0;
+    }
+    
+    100% { /* Loop 15s */
+        transform: translateX(200%) rotate(140deg); 
+        opacity: 0;
+    }
+  }
+
+.rent-button {
+    background: var(--primary-black);
+    width: fit-content;
+    letter-spacing: 0.1em; 
+}
+
+.title {
+    font-weight: bolder;
+    text-transform: uppercase;
+}

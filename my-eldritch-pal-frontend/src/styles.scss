@@ -48,6 +48,13 @@ html {
 
   --mat-expansion-header-hover-state-layer-color: inherit;
   --mat-expansion-container-shape: 0px;
+
+
+
+  --mat-text-button-state-layer-color: var(--ripple-gray);
+  --mat-radio-checked-ripple-color: var(--ripple-gray);
+  --mat-ripple-color: var(--ripple-gray);
+  --mat-text-button-ripple-color: var(--ripple-gray);
   
 }
 
@@ -61,6 +68,7 @@ html {
     --primary-gray: #dbdbdbb8;
     --text-gray: #505050b8;
     --text-gray-light: #dededeb8;
+    --ripple-gray: #dbdbdb36;
 }
 
 
