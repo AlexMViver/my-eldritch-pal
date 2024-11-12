@@ -1,0 +1,22 @@
+.title {
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.body-text {
+    color: var(--text-gray);
+    max-width: 500px;
+    text-align: center;
+}
+
+
+.contact-button {
+    background: var(--primary-black);
+    width: fit-content;
+    letter-spacing: 0.1em; 
+}
+
+.separator-title {
+    font-weight: bolder;
+    text-transform: uppercase;
+}

@@ -1,0 +1,93 @@
+<div class="container-fluid py-3 section-block flex-column">
+
+    <div>
+        <h2 class="text-center title my-4">
+            Want to learn more about us?
+          </h2>
+    </div>
+    <div class="body-text mb-4">
+        MyEldritchPal is a portfolio piece inspired by my love for the fantastical and uncanny. It’s an immersive website I designed to refine my Angular skills and experiment with AI-generated imagery. I see this project as a personal playground — one that will keep evolving as I find new ideas and concepts to bring to life. Take a look around, meet some of my 'pals' and see if my not so funny jokes get a chuckle out of you!
+    </div>
+
+    <div class="mb-4">
+      <button
+      mat-flat-button
+      aria-label="Contact button"
+      class="contact-button"
+      (click)="navigate('/contact')"
+    >
+      <span>Contact me</span>
+    </button>
+    </div>
+
+    <!-- Images pointing at each other -->
+    <div class="d-flex flex-row flex-grow-1 w-100" style="height: 1px;">
+        <div class="w-50 h-100" style="overflow: hidden;">
+            <img
+            class="w-100 h-100"
+            style="object-fit: cover;"
+            src="assets/images/Temp.jpg"
+            alt="Description of image"
+          />
+        </div>
+        <div class="w-50 h-100" style="overflow: hidden;">
+            <img
+            class="w-100 h-100"
+            style="object-fit: cover;"
+            src="assets/images/Temp.jpg"
+            alt="Description of image"
+          />
+        </div>
+    </div>
+
+</div>
+
+<div class="container-fluid mt-5">
+
+  <hr class="solid" style="color:var(--primary-black)">
+
+  <h2 class="text-left separator-title mt-5">
+    Get to know our pals!    
+  </h2>
+
+</div>
+
+<app-showreel></app-showreel>
+
+<div class="container-fluid py-3 section-block flex-column">
+
+  <div>
+      <h2 class="text-center title my-4">
+          Actually want an eldritch pal?
+        </h2>
+  </div>
+  <div class="body-text mb-4">
+      I'm sorry, but we currently don't have the resources to arrange a meeting with an actual cosmic companion.
+      Rest assured, we«re we're doing our very best to rectify this. These beings are in high demand, and the paperwork involved in enrolling even one is literally mind-bending.
+
+      Until further notice, please accept our deepest apologies. Rest assured, when we're able to arrange such an encounter, you'll be notified. (No need to leave your contact info—we already have it.)
+
+      However, if <i>you</i> happen to qualify as an eldritch entity, please do get in touch! <span style="font-size:8px">No Margaret, we already told you, your weird coworker Petunia does not count just because she dislikes chocolate</span>
+  </div>
+
+  <!-- Images pointing at each other -->
+  <div class="d-flex flex-row flex-grow-1 w-100" style="height: 1px;">
+      <div class="w-50 h-100" style="overflow: hidden;">
+          <img
+          class="w-100 h-100"
+          style="object-fit: cover;"
+          src="assets/images/Temp.jpg"
+          alt="Description of image"
+        />
+      </div>
+      <div class="w-50 h-100" style="overflow: hidden;">
+          <img
+          class="w-100 h-100"
+          style="object-fit: cover;"
+          src="assets/images/Temp.jpg"
+          alt="Description of image"
+        />
+      </div>
+  </div>
+
+</div>
