@@ -72,7 +72,7 @@
 .rent-image {
     width: 100%;
     object-fit: cover;
-    height: 300px;
+    aspect-ratio: 3/4; 
     transition: transform 0.6s ease ; /* Smooth transition */
 }
 

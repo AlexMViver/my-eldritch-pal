@@ -28,21 +28,21 @@
             <div class="m-1">
                 <img
                             class="w-100 h-100"
-                            src="assets/images/Temp.jpg"
+                            src="{{ featuredPal.photos[0]}}"
                             alt="Description of image"
                         />
             </div>
             <div #topFriendAbove class="m-1 img-top" [ngStyle]=" isLargeScreen?{'transform': 'translateY(' + topfriendImg1Translate + 'px)'} : null">
               <img
                           class="w-100 h-100"
-                          src="assets/images/Temp.jpg"
+                          src="{{ featuredPal.photos[1]}}"
                           alt="Description of image"
                       />
           </div>
           <div #topFriendBelow class="m-1 img-top" [ngStyle]=" isLargeScreen?{'transform': 'translateY(' + topfriendImg2Translate + 'px)'} : null">
             <img
                         class="w-100 h-100"
-                        src="assets/images/Temp.jpg"
+                        src="{{ featuredPal.photos[2]}}"
                         alt="Description of image"
                     />
         </div>
