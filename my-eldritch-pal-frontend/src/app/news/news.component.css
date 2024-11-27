@@ -1,3 +1,8 @@
+.news-flash {
+    background: var(--secondary-background);
+    cursor: pointer;
+}
+
 .wide-image-container {
     height: 50vh;
     min-height: 500px;

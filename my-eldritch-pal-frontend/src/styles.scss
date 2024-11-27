@@ -66,6 +66,7 @@ html {
     --primary-white: #ffffff;
     --primary-background: #ffffff;
     --primary-gray: #dbdbdbb8;
+    --secondary-background: #fffbf2;
     --text-gray: #505050b8;
     --text-gray-light: #dededeb8;
     --ripple-gray: #dbdbdb36;
@@ -85,6 +86,13 @@ body {
 .section-block {
   display: flex;
   height: calc(100vh - 72px);
+  align-items: center;
+  justify-content: center;
+}
+
+.growable-section-block {
+  display: flex;
+  min-height: calc(100vh - 72px);
   align-items: center;
   justify-content: center;
 }

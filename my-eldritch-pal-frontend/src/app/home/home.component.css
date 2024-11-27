@@ -9,12 +9,32 @@ img {
     display: flex;
 }
 
+.img-container {
+    max-height: 50%;
+    
+}
+
 .small-image {
     margin: 5px;
-    width: 75%;
+    width: auto;
     height: auto;
     object-fit: cover;
     max-height: 100%;
+}
+
+@media (min-width: 992px) {
+    .img-container {
+        max-height: 100%;
+        padding: 5px;
+    }
+    
+    .small-image {
+        margin: 5px;
+        width: 75%;
+        height: auto;
+        object-fit: cover;
+        max-height: 100%;
+    }
 }
 
 .section-slice {
