@@ -2,11 +2,41 @@ img {
     object-fit: cover;
 }
 
+.title-card {
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top:0px;
+    width: 100%;
+    height: 100%;
+    color:var(--primary-white);
+}
+
+.title-text {
+    font-size: clamp(16px, 15vw, 80px);
+    font-weight: bolder;
+    max-width: 600px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em; 
+}
+
+.title-button {
+    background: var(--primary-white);
+    width: fit-content;
+    letter-spacing: 0.1em; 
+    color: var(--primary-black);
+}
+
 .title-image {
     height: calc(100vh - 72px);
     overflow: hidden;
     justify-content: center;
     display: flex;
+    position: relative;
 }
 
 .img-container {

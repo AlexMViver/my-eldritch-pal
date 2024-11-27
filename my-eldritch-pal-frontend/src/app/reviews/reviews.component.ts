@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterContentChecked, ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
 import { ReviewCardComponent } from './review-card/review-card.component';
 import { CommonModule } from '@angular/common';
 
@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './reviews.component.html',
   styleUrl: './reviews.component.css'
 })
-export class ReviewsComponent {
+export class ReviewsComponent implements AfterContentChecked {
 
   @ViewChild('reviewReel', { static: false, read:ElementRef }) reviewReel!: ElementRef;
 
@@ -27,7 +27,7 @@ export class ReviewsComponent {
   constructor(private cdr : ChangeDetectorRef) {}
 
 
-  ngAfterViewInit() {
+  ngAfterContentChecked() {
     this.cdr.detectChanges();
   }
 
