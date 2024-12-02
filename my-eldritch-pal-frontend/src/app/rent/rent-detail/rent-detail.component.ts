@@ -24,7 +24,12 @@ export class RentDetailComponent {
   constructor(private location: Location, private getPalListService: GetPalListService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.setPal(this.route.snapshot.paramMap.get('id'));
+    this.route.paramMap.subscribe(params => {
+      const id = params.get('id');
+      this.setPal(id);
+    });
+
+    //this.setPal(this.route.snapshot.paramMap.get('id'));
   }
 
   setPal(id: string | null) {
