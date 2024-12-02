@@ -20,7 +20,7 @@ export class ReviewsComponent implements AfterContentChecked {
   reviewList = [
     {text: "Praise the worm. Praise the worm. Praise the worm.", reviewer: "Joaquin, Human"},
     {text: "A literally mind-blowing experience!", reviewer: "Rebecca, Human"},
-    {text: "⍰█☐█☐☐⍰██⍰⍰⍰☐ ⍰⍰█☐██ ☐█⍰ ██⍰⍰⍰☐", reviewer: "Paul, Paul"},
+    {text: "⍰█☐█☐☐⍰██ ⍰⍰⍰☐ ⍰⍰█☐██ ☐█⍰ ██⍰⍰⍰☐", reviewer: "Paul, Paul"},
     {text: "It was pretty cool!", reviewer: "Ignacius, Devil"},
   ]
 

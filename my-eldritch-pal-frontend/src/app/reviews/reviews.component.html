@@ -1,4 +1,4 @@
-<div class="container-fluid d-flex section-block align-items-center justify-content-start flex-column px-0" style="overflow: hidden;">
+<div class="container-fluid d-flex growable-section-block align-items-center justify-content-start flex-column px-0" style="overflow: hidden;">
     <!-- Reviews -->
     <div #reviewReel class="review-reel" aria-label="carousel" [style.transform]="updateCarouselPosition()"> <!-- flex-grow-1 -->
         <ng-template ngFor let-item [ngForOf]="reviewList" let-i="index" >
@@ -10,12 +10,12 @@
     <!-- Slider -->
     <div class="d-flex">
         <ng-template ngFor let-item [ngForOf]="reviewList" let-i="index" >
-            <div class="mx-3 slider-buttons" [ngClass]="i==selectedIdx ? 'selected-slider-button' : null"
+            <div class="mx-3 mb-4 slider-buttons" [ngClass]="i==selectedIdx ? 'selected-slider-button' : null"
             attr.aria-label="Show carousel review {{i}}" (click)="jumpToSlide(i)">
             </div>
         </ng-template>
     </div>
-    <div class="mt-4 w-100 h-100">
-        <img class="w-100 h-100" src="assets/images/background/footer/footer_background.png" alt="Description of image" />
+    <div class="w-100 h-100 d-flex justify-content-center" style="margin-top: auto; overflow: hidden;">
+        <img class="" style="object-fit: cover; height: 240px; min-width: 100%;" src="assets/images/background/footer/footer_background.png" alt="Description of image" />
     </div>
 </div>
